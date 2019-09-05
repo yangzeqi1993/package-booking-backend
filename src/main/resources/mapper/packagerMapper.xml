@@ -5,6 +5,10 @@
         select * from `packager`;
     </select>
 
+    <select id="selectOne" resultType="tws.entity.Packager">
+        select * from `packager` where id = #{id};
+    </select>
+
     <insert id="insert" parameterType="tws.entity.Packager">
        insert into `packager`(`id`,`receiver`,`phone`,`weight`,`status`,`appointment`)
        values(#{packager.id},#{packager.receiver},#{packager.phone},#{packager.weight},#{packager.status},#{packager.appointment});

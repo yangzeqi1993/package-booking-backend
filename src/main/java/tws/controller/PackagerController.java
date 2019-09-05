@@ -20,6 +20,11 @@ public class PackagerController {
         return ResponseEntity.ok(packagerMapper.selectAll());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Packager> getOne(@PathVariable String id) {
+        return ResponseEntity.ok(packagerMapper.selectOne(id));
+    }
+
     @PostMapping("")
     public ResponseEntity<Packager> insertPackager(@RequestBody Packager packager) {
         packagerMapper.insert(packager);

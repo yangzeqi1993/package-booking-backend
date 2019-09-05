@@ -11,6 +11,8 @@ public interface PackagerMapper {
 
     List<Packager> selectAll();
 
+    Packager selectOne(@Param("id") String id);
+
     void insert(@Param("packager") Packager packager);
 
     void update(@Param("id") String id, @Param("packager") Packager packager);
